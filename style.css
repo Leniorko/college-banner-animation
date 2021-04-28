@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
+
+body {
+  display: grid;
+  justify-content: center;
+}
+
+.content-wrapper {
+  width: 1024px;
+  height: 512px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
+  background: url("./img//generalBG.gif");
+  background-size: contain;
+}
+
+@keyframes handAnimationIn {
+  0% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes handLightShake {
+  33% {
+    transform: rotate(5deg);
+  }
+
+  66% {
+    transform: rotate(-5deg);
+  }
+}
+
+.left-image-wrapper {
+  transform: translateY(30px);
+  align-self: flex-end;
+}
+
+.left-img {
+  width: 222px;
+  height: 449px;
+  transform-origin: bottom center;
+  animation: handAnimationIn 2s forwards, handLightShake 3s infinite ease-in-out 2s;
+}
+
+.text-content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-content__safe {
+  font-family: "Barrio";
+  font-size: 108px;
+}
+
+.text-content__delivery {
+  font-family: "Barrio";
+  font-size: 50px;
+  background: url("./img/textBG.gif");
+  background-size: cover;
+}
+
+.righ-image-wrapper{
+    align-self: flex-start;
+    transform: translateY(-10px);
+}
+
+.right-img {
+  width: 229px;
+  height: 394px;
+  transform-origin: top center;
+  animation: handAnimationIn 2s forwards, handLightShake 3s infinite ease-in-out 2s;
+}
